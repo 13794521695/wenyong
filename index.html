@@ -1,0 +1,89 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+	
+	<title>一封信</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url("digital-7_mono.ttf") format("truetype");
+}
+</style>
+	<link href="css/default.css" tppabs="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js" tppabs="./js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js" tppabs="./js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js" tppabs="./js/functions.js"></script>
+	<body>
+<div id="mainDiv">
+<div id="content">
+      <div id="code"> <span class="comments">卢雨晴小朋友：</span><br />
+    <span class="space"><span class="comments"></span></span><br />
+    <span class="space"/><span class="comments">一时不知从何说起，微信已经聊了很多，认识了好几个月，就想着做个小网站来表达想说的</span><br />
+    <span class="space"/><span class="comments">其实我一直是一个不善于表达的男生，上台讲话都会紧张，词穷，那我就用代码书写自己的浪漫</span><br />
+    <span class="space"/><span class="comments">我坚信如果娶到你会是我一生最幸运的事情，家庭也会很美满,但我一直觉得你好像廷纠结的</span><br />
+	<span class="space"/><span class="comments">是因为身高吗，可是身高并不能影响我对你好吧？并不会影响我赚钱？并不会影响我会努力做个好丈夫？并不会影响我未来做个好父亲？</span><br />
+	<span class="space"/><span class="comments">我能做的就是如果在一起会好好珍惜，此生不负你，上天一定会以另一种方式好好补偿你</span><br />
+	<span class="space"/><span class="comments">我一直觉得能为家庭，能为身边的妻子和孩子奉行一生的承诺是一件很骄傲的事情</span><br />
+	<span class="space"/><span class="comments">但对于你，我却能说尽世间温柔之话，并不是我本来就如此，而是喜欢一个人会变得有勇气</span><br />
+	<span class="space"/><span class="comments">能娶到你，我甚至能做到把微信所有异性都删除，此生有你足以，万水千山，只取一瓢</span><br />
+	<span class="space"/><span class="comments">若不想在一起，我可以退出,从你生活中彻底消失</span><br />
+	<span class="space"/><span class="comments">我对你感情会像右边的计时器,将一直继续下去,直至数据溢出.....我喜欢你，很喜欢</span><br />
+	
+  </div>
+      <div id="loveHeart">
+    <canvas id="garden"></canvas>
+    <div id="words">
+          <div id="messages"> 这是我们认识的第
+        <div id="elapseClock"></div>
+      </div>
+          <div id="loveu"> 佛曰500百年的回眸才能换来相遇<br/>
+        <div class="signature">  -喜欢你的人</div>
+      </div>
+        </div>
+  </div>
+      <div class="bg1">
+
+    </div>
+<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2023);
+		together.setHours(-3384);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "提醒您：您的浏览器版本过旧^_^<br/>"+
+				"推荐使用 <a href='http://dlsw.br.baidu.com/ditui/zujian/bdBrowserSetup-5956-ftn_1000061134.exe' target='_blank'>百度浏览器<br/>请先升级您的浏览器，效果很炫哦~~"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				adjustWordsPosition();
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+		
+	</script>
+<audio id="main_audio" autoplay="autoplay" preload="auto" loop>
+	<source src="./Stories.mp3" type="audio/mpeg" />
+<embed id="main_audio_ie8" hidden="true" autostart="true" height="0" width=0 loop="true" src="" autoplay="autoplay"/>
+</audio>
+</body>
+</html>
